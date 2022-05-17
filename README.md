@@ -9,14 +9,14 @@ graph LR
   inbox_tool --> actionable{Is it actionable?}
 
   actionable -- No --> sort[ ]
-  actionable -- Yes --> two_min_rule{Will it take\nless than 2 minutes?}
+  actionable -- Yes --> two_min_rule{Will it take<br/>less than 2 minutes?}
 
   sort --> delete[Delete from inbox]
   sort -- Schedule it --> schedule_tool(Apple Reminder / Google calender)
   sort -- Archive it --> archive_tool(Telegram channels / Craft)
 
   two_min_rule -- Yes --> do_it[Do it now!]
-  two_min_rule -- No --> multiple_step{Does it requires\nmultiple steps?}
+  two_min_rule -- No --> multiple_step{Does it requires<br/>multiple steps?}
 
   multiple_step -- Yes --> sort2[ ]
   multiple_step -- No --> sort3[ ]
